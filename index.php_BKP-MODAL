@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<?php include 'head.php'; ?>
+<body>
+
+	<!-- Modal Login-->
+	<div id="id01" class="modal">
+		<form class="modal-content animate" action="./read_membro.php" method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close"
+					title="Close Modal">&times;</span>
+				<i class="fas fa-user fa-3x"></i>
+			</div>
+			<div class="container">
+                                <label for="email"><b>E-mail</b></label>
+				<input type="text" id="email" placeholder="Insira o e-mail" name="email" required>
+				<label for="password"><b>Senha</b></label>
+				<input type="password" id="senha" placeholder="Insira a senha" name="password" required>
+				<button class="botao-login btn" type="submit">Acessar</button></br>
+				<label> <input type="checkbox" checked="checked" name="remember"> Lembre-me </label>
+			</div>
+			<div class="container-bottom" style="background-color:#f1f1f1">
+				<button class="cancelbtn btn" type="button"
+					onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+				<div class="jpnc">
+					<div class="psw">Esqueceu a senha? <a href="#">Alterar senha</a></div>
+					<div class="psw">Não possui um login? <a href="#">Registrar-se</a></div>
+				</div>
+			</div>
+		</form>
+	</div>
+        
+	<!-- Modal Registrar-->
+	<div id="id02" class="modal">
+		<form class="modal-content animate" action="./create_membro.php" method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close"
+					title="Close Modal">&times;</span>
+				<i class="fas fa-user-plus fa-3x"></i>
+			</div>
+			<div class="container">
+                                <label for="nome"><b>Nome de Usuário</b></label>
+				<input type="text" id="nome" placeholder="Insira o Nome de Usuário" name="nome" required>
+				<label for="cpf"><b>CPF</b></label>
+				<input type="text" id="cpf" placeholder="Insira o CPF" name="cpf" required>
+				<label for="email"><b>E-mail</b></label>
+				<input type="text" id="email" placeholder="Insira o e-mail" name="email" required>
+				<label for="password"><b>Senha</b></label>
+				<input type="password" id="senha" placeholder="Insira a senha" name="password" required>
+				<button class="botao-login btn" type="submit">Registrar-se</button></br>
+			</div>
+			<div class="container-bottom" style="background-color:#f1f1f1">
+				<button class="cancelbtn btn" type="button"
+					onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+			</div>
+		</form>
+	</div>
+        
+        
+	<div class="barra_topo"></div>
+	<header class="barra_nav">
+                <a href="index.php"><img src="img/na_pequeno_1.png"></img></a>
+                <nav>
+			<div class="barra_nav_menu">
+				<button class="botao_nav" onclick="document.getElementById('id01').style.display='block'">
+					<i class="fas fa-user"></i></button>
+				<button class="botao_nav" onclick="document.getElementById('id02').style.display='block'">
+					<i class="fas fa-user-plus"></i></button></li>
+			</div>
+		</nav>
+	</header>
+        
+
+	<div class="barra_topo"></div>
+	<div class="barra-degrade1"></div>
+	<div>
+		<div class="barra-titulo">Grupo Central de Indaiatuba</div>
+	</div>
+
+	<div class="barra-mapa">
+		<img src="img/bacis_gray.png" style="width:100%">
+	</div>        
+        <div class="info_p8">
+		<div>
+			Nosso programa é um conjunto de princípios escritos de uma maneira tão simples 
+                        que podemos segui-los nas nossas vidas diárias. </br>
+                        O mais importante é que eles funcionam.</br></br>
+                        Endereço: Av. Itororó 356, Cidade Nova, Indaiatuba - SP</br>
+                </div>
+	</div>
+        <?php include 'footer.php'; ?>
+	<script src="js/botao.js"></script>
+        <script src="js/modal.js"></script>
+</body>
+</html>
